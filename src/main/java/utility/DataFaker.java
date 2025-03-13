@@ -31,7 +31,7 @@ public class DataFaker {
                 ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
                 instance = mapper.readValue(Resources.getResource("data_faker.yaml"), DataFaker.class);
             } catch (Exception e) {
-                System.out.println("data_faker.yaml Config Dosyası Okunurken hata alındı!"+ e);
+                System.out.println("data_faker.yaml Config Dosyası Okunurken hata alındıassd!"+ e);
             }
         }
         return instance;
