@@ -8,7 +8,7 @@ public class AllPages{
 
     }
 
-    //In Java, every class can have a return type..
+    //In Java, every class can have a return type.
     //We created a private instance with each page class return type.
 
     public SeleniumBase lib=new SeleniumBase();
