@@ -18,7 +18,7 @@ public class SeleniumBase {
         try {
             element.click();
         }catch (Exception e){
-            Log.fail("elemente tıklanılamadı! "+e);
+            Log.fail("element could not be clicked! "+e);
         }
     }
 
@@ -28,7 +28,7 @@ public class SeleniumBase {
         try {
             text=element.getText();
         }catch (Exception e){
-            Log.fail("Elementin yazisi alinamadi.",e);
+            Log.fail("The text of the element could not be retrieved.",e);
         }
         return text;
     }
@@ -37,7 +37,7 @@ public class SeleniumBase {
         try {
             Driver.getDriver().get(DataFinder.getValue(url));
         }catch (Exception e){
-            Log.fail("Istenilen URL gidilemedi."+ e);
+            Log.fail("The requested URL was not visited."+ e);
         }
     }
 
@@ -62,7 +62,7 @@ public class SeleniumBase {
         try {
             displayed=element.isDisplayed();
         }catch (Exception e){
-            Log.fail("Element goruntulenemedi!!"+e);
+            Log.fail("Element could not be displayed!!"+e);
         }
 
         return displayed;
@@ -95,7 +95,7 @@ public class SeleniumBase {
             ((JavascriptExecutor)Driver.getDriver()).executeScript("arguments[0].click();", element);
 
         }catch (Exception e){
-            Log.fail("Elementte sorunla karşılaşıldı",e);
+            Log.fail("A problem was encountered in the element",e);
         }
     }
 
@@ -105,7 +105,7 @@ public class SeleniumBase {
             actions.moveToElement(element).build().perform();
 
         }catch (Exception e){
-            Log.fail("Elementte sorunla karşılaşıldı",e);
+            Log.fail("A problem was encountered in the element",e);
         }
     }
 
@@ -113,7 +113,7 @@ public class SeleniumBase {
         try {
             element.sendKeys(text);
         }catch (Exception e){
-            Log.fail("Text gonderilemedi.");
+            Log.fail("Text could not be sent.");
         }
     }
 

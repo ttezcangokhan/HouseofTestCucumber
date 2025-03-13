@@ -7,7 +7,7 @@ public class Terminal {
         try {
             Runtime.getRuntime().exec(command);
         } catch (Exception e) {
-            System.out.println("Terminal kodu çalışırken hata çıktı. Command: " + command +" HATA -> "+ e);
+            System.out.println("An error occurred while running the terminal code. Command: " + command +" Fehler -> "+ e);
         }
     }
 }

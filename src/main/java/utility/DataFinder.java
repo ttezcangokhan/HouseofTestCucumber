@@ -42,13 +42,13 @@ public class DataFinder {
             is = ClassLoader.getSystemResourceAsStream(filePath + ".properties");
             prop.load(is);
         } catch (Exception e) {
-            System.out.println(filePath + ".properties" + " dosyası bulunamadı! \n\n"+ e);
+            System.out.println(filePath + ".properties" + " file not found! \n\n"+ e);
         } finally {
             if (is != null) {
                 try {
                     is.close();
                 } catch (IOException e) {
-                    System.out.println("Dosya kapatılamadı! \n\n"+ e);
+                    System.out.println("Could not close file! \n\n"+ e);
                 }
             }
         }

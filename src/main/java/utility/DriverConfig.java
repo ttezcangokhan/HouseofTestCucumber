@@ -25,7 +25,7 @@ public class DriverConfig {
                 ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
                 instance = mapper.readValue(new File("src/test/resources/driver_config.yaml"), DriverConfig.class);
             } catch (Exception e) {
-                System.out.println("driver_config Dosyası Okunurken hata alındı!"+e);
+                System.out.println("Error Received While Reading driver_config File!"+e);
             }
         }
         return instance;

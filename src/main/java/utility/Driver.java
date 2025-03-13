@@ -38,7 +38,7 @@ public class Driver {
                     WebDriverManager.chromedriver().setup();
                     driver.set(new ChromeDriver(options));
                 } else {
-                    throw new RuntimeException("Desteklenmeyen Browser Seçildi: " + browser);
+                    throw new RuntimeException("Unsupported Browser Selected: " + browser);
                 }
             }
         }
@@ -69,7 +69,7 @@ public class Driver {
     @Attachment(value = "ScreenShot : {0}", type = "image/png")
     public static byte[] takeScreenShot(String message) {
         if (Driver.getDriver() == null) {
-            System.out.println("Driver null olduğu için ekran görüntüsü alınamadı.");
+            System.out.println("Screenshot could not be taken because the driver is null.");
             return null;
         }
         return ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
